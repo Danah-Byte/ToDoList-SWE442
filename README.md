@@ -1,27 +1,51 @@
-# To-Do List Application
+# To-Do List (Java)
 
-## Project Description
-A simple Java-based To-Do List application that allows users to manage their daily tasks through a command-line interface.
+A simple command-line To-Do List application written in Java.
+Built for **SWE 442 - Software Configuration Management** to practice Git and GitHub:
+branching, pull requests, merge conflict resolution, tags and release notes.
 
 ## Features
-- Add new tasks.
-- View all tasks.
-- Display a message when a task is added successfully.
-- Exit the application.
 
-## Technologies Used
-- Java
-- NetBeans IDE
-- Git
-- GitHub
+- **Add Task** - add a new task to the list
+- **View Tasks** - show all tasks with their numbers
+- **Delete Task** - delete a task by its number, with validation and error messages (v1.1)
+- **Exit** - close the program
 
-## How to Run
-1. Open the project in NetBeans IDE.
-2. Open the ToDoList.java file.
-3. Run the project.
-4. Select an option from the menu.
+## Requirements
 
-## Project Information
-- Course: SWE 442 – Software Configuration Management
-- Project: Version Control and Release Management for a Java Utility Tool
-- Tool: To-Do List
+- Java JDK 8 or newer
+- NetBeans (optional, the project was created with it)
+
+## How to run
+
+```bash
+git clone https://github.com/Danah-Byte/ToDoList-SWE442.git
+cd ToDoList-SWE442/src
+javac todolist/ToDoList.java
+java todolist.ToDoList
+```
+
+Or open the project folder in NetBeans and press **Run**.
+
+## Example
+
+```
+===== MY TO-DO LIST =====
+1. Add Task
+2. View Tasks
+3. Delete Task
+4. Exit
+Enter your choice:
+```
+
+## Git workflow
+
+- `master` holds the stable code.
+- Each feature is developed on its own branch and merged with a Pull Request:
+  - `feature/delete-task` - delete task feature (PR #1)
+  - `feature/complete-task` - menu title update (PR #2, merge conflict resolved)
+- Releases are tagged `v1.0` and `v1.1`. See [RELEASE_NOTES.md](RELEASE_NOTES.md).
+
+## Author
+
+Danah Abdulaziz AL-Ghutayghit - ID 451205638
