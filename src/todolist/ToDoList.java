@@ -4,6 +4,7 @@
  */
 package todolist;
 
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,8 +20,9 @@ public class ToDoList {
         do {
             System.out.println("\n===== MY TO-DO LIST =====");
             System.out.println("1. Add Task");
-            System.out.println("2. View Tasks");
-            System.out.println("3. Exit");
+System.out.println("2. View Tasks");
+System.out.println("3. Delete Task");
+System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
 
             choice = input.nextInt();
@@ -50,14 +52,31 @@ public class ToDoList {
                     break;
 
                 case 3:
-                    System.out.println("Goodbye!");
-                    break;
+    if (tasks.isEmpty()) {
+        System.out.println("No tasks to delete.");
+    } else {
+        System.out.println("Enter task number to delete:");
+        int taskNumber = input.nextInt();
+        input.nextLine();
+
+        if (taskNumber >= 1 && taskNumber <= tasks.size()) {
+            tasks.remove(taskNumber - 1);
+            System.out.println("Task deleted successfully!");
+        } else {
+            System.out.println("Invalid task number!");
+        }
+    }
+    break;
+
+case 4:
+    System.out.println("Goodbye!");
+    break;
 
                 default:
                     System.out.println("Invalid choice!");
             }
 
-        } while (choice != 3);
+        } while (choice != 4);
 
         input.close();
     }
